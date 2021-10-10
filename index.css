@@ -7,13 +7,13 @@
 }
 
 header {
-  background: #000;
+  background: var(--header-background);
 }
 
 #header-component {
   display: flex;
   align-items: center;
-  height: 10vh;
+  height: 12.5vh;
   justify-content: space-between;
   margin: auto;
 }
@@ -30,7 +30,9 @@ header {
 /* button-animations */
 :root{
     --button-shadow: #636363;
-
+    --button-hover: #5C5C5C;
+    --section-background: #151515;
+    --header-background: #090909;
 }
 button{
     cursor: pointer;
@@ -50,10 +52,51 @@ button:hover{
     /* border: solid 3px #FFF; */
     /* color: #FFF; */
     background-color: #EAEAEA;
+    box-shadow: 0.2rem 0.25rem var(--button-hover);
+
 }
 
 button:active{
-    box-shadow: 0.1rem 0.15rem var(--button-shadow);
+    box-shadow: 0.1rem 0.15rem var(--button-hover);
     transform: translate3d(0.1rem, 0.1rem, 0)
 }
 
+section{
+    background-color: var(--section-background);
+    padding: 5rem 0;
+}
+
+#section-component{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+.container{
+    background-color: #FFF;
+    border-radius: 3rem;
+    box-shadow: 0;
+    padding: 5rem;
+    font-family: 'Ubuntu';
+    max-width: 45vw;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.container:hover{
+    /* box-shadow: #EAEAEA 0px 2px 8px 0px; */
+    /* box-shadow: #EAEAEA 0px 0px 16px; */
+    transform: translate3d(0.25rem, 0.25rem, 0);
+    background-color: #EAEAEA;
+}
+
+.container h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.container p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
